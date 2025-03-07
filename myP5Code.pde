@@ -5,6 +5,11 @@ setup = function() {
 };
 
 var answer = 0;
+var drawStar =  function(starX,starY,starColor){
+text("⭐️", starX,starY);
+}
+
+
 
 draw = function(){
   background(10,10,10);
@@ -14,7 +19,9 @@ draw = function(){
   ellipse(200, 104, 280, 100);
 triangle (340,90,390,40,300,70)
 fill(0,0,0);
-  
+ 
+
+
 
 if (answer==0) {text("Tis' I, The Almighty Wizard.", 130, 90)
   text(" Ask me a question, and I shall answer.", 100, 110)};
@@ -64,6 +71,18 @@ if (answer==0) {text("Tis' I, The Almighty Wizard.", 130, 90)
     if (mousePressed && answer == 12) {
     text("Certainly.", 150, 100);}  
     
+      
+   textSize(30);
+   if(mousePressed)
+    {text("⭐️",random(0,600),random(0,600))};
+    
+    
+    
+    drawStar(10,100);
+      drawStar(30,60);
+      
+          drawStar(350,150);
+      drawStar(330,190);
 };
 
 
